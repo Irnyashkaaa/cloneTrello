@@ -1,14 +1,19 @@
 import React from 'react'
+import { initBoardsType } from '../../App'
 import s from './firstBoardComponent.module.css'
 
 type propsType = {
     firstBoard: boolean
     setFirstBoard: (firstBoard: boolean) => void
+    setBoards: (boards: initBoardsType) => void
+    boards: initBoardsType | [] 
 }
 
-export const FirstBoardComponent: React.FC<propsType> = ({firstBoard, setFirstBoard}) => {
+export const FirstBoardComponent: React.FC<propsType> = ({firstBoard, setFirstBoard, boards, setBoards}) => {
 
     const clickButton = () => {
+        const newBoards = [...boards, {title: 'title', doArray: []}]
+        setBoards(newBoards)
         setFirstBoard(false)
     }
 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Завод меблів</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    body {
+        user-select: none;
+        background-color: #3f3b38;
+    }
+
+    .robota {
+        margin: auto;
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 22px;
+        background-color: #191919;
+        margin-top: 100px;
+        max-width: 864px;
+        height: 625px;
+        color: #ff2727;
+        border-radius: 10px;
+    }
+
+    .header {
+        background-color: #202020;
+        border-radius: 10px;
+    }
+
+    .header__flex {
+        max-width: 780px;
+        margin: auto;
+        padding: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flex__block-2 {
+        background-color: #383838;
+        border-radius: 50%;
+        padding: 5px 5px 0 5px;
+    }
+
+    .flex__block-2 img {
+        width: 20px;
+    }
+
+    .zrazok__flex {
+        margin: 60px 0 0 60px;
+    }
+
+    .robobl__flex {
+        margin: 60px 60px 0 0;
+    }
+
+    .flex__zrazok-robobl {
+        background-color: #292929;
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+    }
+
+    .robota__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .block__flex {
+        display: flex;
+        gap: 30px;
+        max-width: 300px;
+        flex-wrap: wrap;
+        background-color: #1f1f1e;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .block__button {
+        max-width: 750px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, rgba(255, 26, 26, 1) 0%, rgba(255, 42, 42, 1) 100%);
+        box-shadow: 0px 4px 0px 1px rgba(156, 38, 38, 1);
+        color: #000;
+        margin: auto;
+        text-align: center;
+        padding: 12px 0 12px 0;
+        margin-top: 40px;
+    }
+
+    .flex__zrazok-robobl img {
+        max-width: 80px;
+    }
+</style>
+
+<body>
+    <div class="robota">
+        <div class="header">
+            <div class="header__flex">
+                <div class="flex__block-1">Збирання зброї</div>
+                <div class="flex__block-2"><img src="/img/x-close-delete.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="robota__block">
+            <div class="block__zrazok">
+                <div class="zrazok__flex block__flex">
+                    <div class="flex__zrazok-1 flex__zrazok-robobl"><img src="/img/factory_wood.png" alt=""></div>
+                    <div class="flex__zrazok-2 flex__zrazok-robobl"><img src="/img/factory_ammo.png" alt=""></div>
+                    <div class="flex__zrazok-3 flex__zrazok-robobl"><img src="/img/factory_metall.png" alt=""></div>
+                    <div class="flex__zrazok-4 flex__zrazok-robobl"><img src="/img/factory_scrap.png" alt=""></div>
+                    <div class="flex__zrazok-5 flex__zrazok-robobl"><img src="/img/factory_ammo.png" alt=""></div>
+                    <div class="flex__zrazok-6 flex__zrazok-robobl"><img src="/img/factory_wood.png" alt=""></div>
+                    <div class="flex__zrazok-7 flex__zrazok-robobl"><img src="/img/factory_ammo.png" alt=""></div>
+                    <div class="flex__zrazok-8 flex__zrazok-robobl"><img src="/img/factory_metall.png" alt=""></div>
+                    <div class="flex__zrazok-9 flex__zrazok-robobl"><img src="/img/factory_metall.png" alt=""></div>
+                </div>
+            </div>
+            <div class="block__robobl">
+                <div class="robobl__flex block__flex">
+                    <div class="flex__robobl-1 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-2 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-3 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-4 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-5 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-6 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-7 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-8 flex__zrazok-robobl"></div>
+                    <div class="flex__robobl-9 flex__zrazok-robobl"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block__button">Розпочати процес збирання</div>
+    </div>
+</body>
+
+</html>
