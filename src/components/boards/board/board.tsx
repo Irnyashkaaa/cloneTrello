@@ -19,6 +19,9 @@ export const Board: React.FC<propsType> = ({ title, doArray, boardIndex, setBoar
     const taskInputRef = createRef<any>()
     const [isTitleChanging, setIsTitleChanging] = useState<boolean>(true)
     const [isAddingNewTask, setIsAddingNewTask] = useState<boolean>(false)
+    const [currentItem, setCurrentItem] = useState<{ item: { isDoDone: boolean, task: string }, currentItemNumber: number }>(
+        { item: { isDoDone: false, task: 'any' }, currentItemNumber: 1 }
+    )
 
     let newBoards: initBoardsType = [...boards]
 
@@ -39,13 +42,11 @@ export const Board: React.FC<propsType> = ({ title, doArray, boardIndex, setBoar
         setBoards(newBoards)
     }
 
-    const [currentItem, setCurrentItem] = useState<{ item: { isDoDone: boolean, task: string }, currentItemNumber: number }>(
-        { item: { isDoDone: false, task: 'any' }, currentItemNumber: 1 }
-    )
+
 
     const addNewTask = () => {
         if (taskInputRef.current.value) {
-            newBoards[boardIndex].doArray.push({isDoDone: false, task: taskInputRef.current.value})
+            newBoards[boardIndex].doArray.push({ isDoDone: false, task: taskInputRef.current.value })
         }
         setIsAddingNewTask(false)
     }
@@ -63,7 +64,8 @@ export const Board: React.FC<propsType> = ({ title, doArray, boardIndex, setBoar
             <div className={s.boardList}>
                 {doArray.map((doItem, i) => {
                     return <ToDoItem currentItem={currentItem} setCurrentItem={setCurrentItem} indexBoard={boardIndex} itemIndex={i}
-                        currentBoard={boardIndex} boards={boards} setBoards={setBoards} doItem={doItem} setIsAddingNewTask={setIsAddingNewTask} isAddingNewTask={isAddingNewTask} />
+                        currentBoard={boardIndex} boards={boards} setBoards={setBoards} doItem={doItem} 
+                        setIsAddingNewTask={setIsAddingNewTask} isAddingNewTask={isAddingNewTask} />
                 })}
             </div>
             <div>

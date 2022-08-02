@@ -17,17 +17,25 @@ type propsType = {
 
 export const ToDoItem: React.FC<propsType> = ({ doItem, boards, setBoards, currentBoard,
     indexBoard, itemIndex, setCurrentItem, currentItem, isAddingNewTask, setIsAddingNewTask }) => {
+    let newBoards = [...boards]
+
 
     const changeIsDone = (e: any) => {
-        let newBoards = [...boards]
         const thisDoItemIsDone = newBoards[indexBoard].doArray[itemIndex].isDoDone
         newBoards[indexBoard].doArray[itemIndex].isDoDone = !thisDoItemIsDone
+        setBoards(newBoards)
+    }
+
+    const changeTaskPositions = () => {
+        newBoards[indexBoard].doArray.splice(currentItem.currentItemNumber, 1)
+        newBoards[indexBoard].doArray.splice(itemIndex,0, currentItem.item)
         setBoards(newBoards)
     }
 
     return (
         <div
             draggable={true}
+            onDrop={changeTaskPositions}
             onDragStart={() => setCurrentItem({ item: doItem, currentItemNumber: itemIndex })}
             onClick={changeIsDone}
             className={doItem.isDoDone ? s.itemDone : s.item}>
