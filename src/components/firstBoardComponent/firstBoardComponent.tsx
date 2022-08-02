@@ -12,7 +12,7 @@ type propsType = {
 export const FirstBoardComponent: React.FC<propsType> = ({firstBoard, setFirstBoard, boards, setBoards}) => {
 
     const clickButton = () => {
-        const newBoards = [...boards, {title: 'title', doArray: []}]
+        const newBoards = [...boards, {title: 'title', doArray: [], isAddingNewTask: false}]
         setBoards(newBoards)
         setFirstBoard(false)
     }

@@ -1,0 +1,15 @@
+.itemDone{
+    background-color: aquamarine;
+    padding: 4px;
+    margin: 2px;
+    text-decoration: line-through;
+}
+.item{
+    padding: 4px;
+    margin: 2px;
+    background-color: rgba(255, 202, 248, 0.678);
+}
+.button {
+    width: 10px;
+    height: 10px
+}
