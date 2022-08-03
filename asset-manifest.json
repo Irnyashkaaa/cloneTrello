@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cloneTrello/static/css/main.d1769b53.css",
+    "main.js": "/cloneTrello/static/js/main.25897948.js",
+    "static/js/787.20c63e1b.chunk.js": "/cloneTrello/static/js/787.20c63e1b.chunk.js",
+    "index.html": "/cloneTrello/index.html",
+    "main.d1769b53.css.map": "/cloneTrello/static/css/main.d1769b53.css.map",
+    "main.25897948.js.map": "/cloneTrello/static/js/main.25897948.js.map",
+    "787.20c63e1b.chunk.js.map": "/cloneTrello/static/js/787.20c63e1b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1769b53.css",
+    "static/js/main.25897948.js"
+  ]
+}
