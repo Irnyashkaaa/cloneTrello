@@ -58,21 +58,20 @@ export const Board: React.FC<propsType> = ({ title, doArray, boardIndex, setBoar
             onMouseEnter={() => setCurrentBoard({ board: boards[boardIndex], currentBoardNumber: boardIndex })}
             onDrop={onDrop}>
             <div className={s.title}>
-                {isTitleChanging ? <input ref={titleInputRef} onBlur={titleInputOnfocus} autoFocus={true} placeholder='Enter here title..' /> :
+                {isTitleChanging ? <input className={s.inputBlock} ref={titleInputRef} onBlur={titleInputOnfocus} autoFocus={true} placeholder='Enter here title..' /> :
                     <div onDoubleClick={() => setIsTitleChanging(true)}>{title ? title : 'Click to change title'}</div>}
             </div>
             <div className={s.boardList}>
                 {doArray.map((doItem, i) => {
-                    return <ToDoItem currentItem={currentItem} setCurrentItem={setCurrentItem} indexBoard={boardIndex} itemIndex={i}
-                        currentBoard={boardIndex} boards={boards} setBoards={setBoards} doItem={doItem} 
+                    return <ToDoItem key={doItem + i} currentItem={currentItem} setCurrentItem={setCurrentItem} indexBoard={boardIndex} itemIndex={i}
+                        currentBoard={boardIndex} boards={boards} setBoards={setBoards} doItem={doItem}
                         setIsAddingNewTask={setIsAddingNewTask} isAddingNewTask={isAddingNewTask} />
                 })}
             </div>
-            <div>
-                {isAddingNewTask ? <input onBlur={addNewTask} autoFocus={true} ref={taskInputRef} /> : ''}
-
+            <div >
+                {isAddingNewTask ? <input autoCapitalize='auto' className={s.inputBlock} onBlur={addNewTask} autoFocus={true} ref={taskInputRef} /> : ''}
             </div>
-            <button onClick={() => setIsAddingNewTask(true)}>+</button>
+            <button className={s.boardButton} onClick={() => setIsAddingNewTask(true)}>+</button>
         </div>
     )
 }

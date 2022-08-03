@@ -10,7 +10,10 @@
     box-shadow: 5px 5px #8888886e;
     cursor: pointer;
     font-weight: 700;
+    border: 0.5px solid rgb(160, 255, 179);
+
 }
 .button:hover {
     border: 0.5px solid rgb(255, 255, 255);
+
 }

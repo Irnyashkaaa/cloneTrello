@@ -16,7 +16,7 @@ export const AllBoards: React.FC<propsType> = ({boards, isFirstBoard, setBoards,
     return (
         <div className={s.boards}>
             {isFirstBoard? boards.map((board, i)=> {
-                return <Board currentBoard={currentBoard} setCurrentBoard={setCurrentBoard} 
+                return <Board key={i} currentBoard={currentBoard} setCurrentBoard={setCurrentBoard} 
                 setBoards={setBoards} boards={boards} boardIndex={i} title={board.title} doArray={board.doArray}/>
             }) : '' }
         </div>

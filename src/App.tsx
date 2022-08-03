@@ -13,7 +13,7 @@ const App = () => {
   const [firstBoard, setFirstBoard] = useState<boolean>(true)
   const [boards, setBoards] = useState<initBoardsType | []>(initBoards)
   const [currentBoard, setCurrentBoard] = useState<{ board: boardType, currentBoardNumber: number }>(
-    { board: { title: 'dfdf', doArray: [{ isDoDone: false, task: 'fdf' }], isAddingNewTask: false }, currentBoardNumber: 1, }
+    { board: { title: '', doArray: [{ isDoDone: false, task: '' }], isAddingNewTask: false }, currentBoardNumber: 1, }
   )
 
   return (

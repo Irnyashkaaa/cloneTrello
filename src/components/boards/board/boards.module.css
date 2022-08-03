@@ -12,17 +12,20 @@
     min-width: 250px;
     background-color: rgb(234, 218, 248);
     padding: 10px;
+    cursor:grab;
 }
 
 .title {
     font-size: 28px;
     text-transform: capitalize;
     justify-self: left;
+    cursor: pointer;
 }
 .boardList{
     display: flex;
     flex-direction: column;
     text-align: left;
+    cursor: auto;
 }
 .listItem {
     width: 100%;
@@ -30,4 +33,20 @@
     margin: 3px 0px;
     text-align: left;
     padding: 2px;
+}
+.inputBlock {
+    font-size: 18px;
+    padding: 2px;
+}
+.boardButton {
+    width: 100%;
+    background-color: rgba(141, 212, 230, 0.747);
+    border: 1px rgb(141, 212, 230, 0.747) solid;
+    color: rgb(150, 136, 235);
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+.boardButton:hover {
+    border-color: rgb(150, 136, 235);
 }
